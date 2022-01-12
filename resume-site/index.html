@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>index.html</title>
+  <script>
+    fetch('https://zwbp1u381e.execute-api.eu-central-1.amazonaws.com/Prod/put')
+        .then(() => fetch('https://zwbp1u381e.execute-api.eu-central-1.amazonaws.com/Prod/get'))
+        .then(response => response.json())
+        .then((data) => {
+            document.getElementById('replaceme').innerText = data.count
+        })
+</script>
+  <link type="text/css" rel="stylesheet" href="css/resume.css">
+</head>
+<body>
+<div id="header"></div>
+<div class="left"></div>
+<div class="stuff">
+  <br><br>
+  <h1>Resume</h1>
+  <h2>Daniel</h2>
+  <hr />
+  <br>
+  <p class="head">Interests</p>
+  <ul>
+    <li>Cloud</li>
+    <li>Gaming</li>
+    <li>Travel</li>
+    <li>Programming</li>
+    <li>Computer Science</li>
+  </ul>
+  <p class="head">Skills</p>
+  <ul>
+    <li>German</li>
+	<li>English</li>
+	<li>Serbian</li>
+	<li>Microsoft Office (Word, Excel, Powerpoint)</li>
+	<li>Driver's license (B)</li>
+  </ul>
+  <p class="head">Education</p>
+  <ul>
+      <li>Ferdinand von Steinbeis Schule Ulm</li>
+    </a>
+	  <li>Abendgymnasium Ulm</li>
+      </ul>
+  <p class="head">Experience</p>
+  <ul>
+    <li>Warehouse employee</li>
+    <li>Corona test center employee</li>
+  </ul>
+  <p>
+      Visitors:
+      <span id="replaceme" />
+  </p>
+</div>
+<div class="right"></div>
+<div id="footer">
+  <h2 id="name">Daniel</h2></div>
+  
+
+  </body>
+</html>
